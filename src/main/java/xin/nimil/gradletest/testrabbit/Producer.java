@@ -17,7 +17,7 @@ public class Producer {
         Connection connection = connectionFactory.newConnection();
         Channel channel = connection.createChannel();
         for (int i = 0; i < 5; i++) {
-            String msg = "hell";
+            String msg = "hello";
             channel.basicPublish("", "test001", null, msg.getBytes());
         }
         channel.close();
